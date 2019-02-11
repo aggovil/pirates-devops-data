@@ -4,15 +4,15 @@ ns xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sp
 
 
 
--<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
 
-<property value="com.mysql.jdbc.Driver" name="driverClassName"/>
+<property value="oracle.jdbc.OracleDriver" name="driverClassName"/>
 
-<property value="jdbc:mysql://localhost:3306/test" name="url"/>
+<property value="jdbc:oracle:thin:@oracle:1521:xe" name="url"/>
 
-<property value="root" name="username"/>
+<property value="pirates" name="username"/>
 
-<property value="" name="password"/>
+<property value="pirates" name="password"/>
 
 </bean>
 
@@ -22,7 +22,7 @@ ns xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sp
 
 
 
--<jdbc:initialize-database data-source="dataSource">
+<jdbc:initialize-database data-source="dataSource">
 
 <jdbc:script location="org/springframework/batch/core/schema-drop-mysql.sql"/>
 
