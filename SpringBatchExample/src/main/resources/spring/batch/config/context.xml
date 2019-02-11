@@ -4,7 +4,7 @@ ns xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.s
 
 
 
--<bean class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean" id="jobRepository">
+<bean class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean" id="jobRepository">
 
 <property ref="dataSource" name="dataSource"/>
 
@@ -21,7 +21,7 @@ ns xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.s
 
 
 
--<bean class="org.springframework.batch.core.launch.support.SimpleJobLauncher" id="jobLauncher">
+<bean class="org.springframework.batch.core.launch.support.SimpleJobLauncher" id="jobLauncher">
 
 <property ref="jobRepository" name="jobRepository"/>
 
