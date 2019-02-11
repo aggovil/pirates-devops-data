@@ -6,5 +6,5 @@ ADD pom.xml ./pom.xml
 ADD src /src
 RUN ["mvn", "package"]
 EXPOSE 8080
-ADD /target/pirates-spring-csv-0.0.1.jar pirates-spring-csv-0.0.1.jar
-ENTRYPOINT ["java", "-jar", "pirates-spring-csv-0.0.1.jar"]
+ADD /target/SpringBatchExample-1.0-SNAPSHOT.jar SpringBatchExample-1.0-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "SpringBatchExample-1.0-SNAPSHOT.jar"]
